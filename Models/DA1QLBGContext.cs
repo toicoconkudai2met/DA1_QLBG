@@ -28,7 +28,9 @@ namespace GUI.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+
                 optionsBuilder.UseSqlServer("Server=HÙNG;Database=DA1QLBG;Trusted_Connection=True;TrustServerCertificate=true;");
+
             }
         }
 
@@ -37,7 +39,9 @@ namespace GUI.Models
             modelBuilder.Entity<ChiTietHoaDon>(entity =>
             {
                 entity.HasKey(e => e.MaCthd)
+
                     .HasName("PK__ChiTietH__1E4FA7711D7121BF");
+
 
                 entity.ToTable("ChiTietHoaDon");
 
@@ -58,23 +62,31 @@ namespace GUI.Models
                 entity.HasOne(d => d.MaHdNavigation)
                     .WithMany(p => p.ChiTietHoaDons)
                     .HasForeignKey(d => d.MaHd)
+
                     .HasConstraintName("FK__ChiTietHoa__MaHD__440B1D61");
+
 
                 entity.HasOne(d => d.MaSpNavigation)
                     .WithMany(p => p.ChiTietHoaDons)
                     .HasForeignKey(d => d.MaSp)
+
                     .HasConstraintName("FK__ChiTietHoa__MaSP__4316F928");
+
 
                 entity.HasOne(d => d.MaVoucherNavigation)
                     .WithMany(p => p.ChiTietHoaDons)
                     .HasForeignKey(d => d.MaVoucher)
+
                     .HasConstraintName("FK__ChiTietHo__MaVou__44FF419A");
+
             });
 
             modelBuilder.Entity<HoaDon>(entity =>
             {
                 entity.HasKey(e => e.MaHd)
+
                     .HasName("PK__HoaDon__2725A6E0DC34BE02");
+
 
                 entity.ToTable("HoaDon");
 
@@ -102,18 +114,23 @@ namespace GUI.Models
                 entity.HasOne(d => d.MaKhNavigation)
                     .WithMany(p => p.HoaDons)
                     .HasForeignKey(d => d.MaKh)
+
                     .HasConstraintName("FK__HoaDon__MaKH__3F466844");
+
 
                 entity.HasOne(d => d.MaNvNavigation)
                     .WithMany(p => p.HoaDons)
                     .HasForeignKey(d => d.MaNv)
+
                     .HasConstraintName("FK__HoaDon__MaNV__403A8C7D");
             });
 
             modelBuilder.Entity<KhachHang>(entity =>
             {
                 entity.HasKey(e => e.MaKh)
+
                     .HasName("PK__KhachHan__2725CF1E5677F9F2");
+
 
                 entity.ToTable("KhachHang");
 
@@ -138,7 +155,9 @@ namespace GUI.Models
             modelBuilder.Entity<NhanVien>(entity =>
             {
                 entity.HasKey(e => e.MaNv)
+
                     .HasName("PK__NhanVien__2725D70A7B54E5A4");
+
 
                 entity.ToTable("NhanVien");
 
@@ -159,15 +178,19 @@ namespace GUI.Models
                     .HasMaxLength(50)
                     .HasColumnName("TenNV");
 
+
                 entity.Property(e => e.TrangThaiNv)
                     .HasMaxLength(30)
                     .HasColumnName("TrangThaiNV");
+
             });
 
             modelBuilder.Entity<SanPham>(entity =>
             {
                 entity.HasKey(e => e.MaSp)
+
                     .HasName("PK__SanPham__2725081C7CD43CCB");
+
 
                 entity.ToTable("SanPham");
 
@@ -187,7 +210,9 @@ namespace GUI.Models
             modelBuilder.Entity<Voucher>(entity =>
             {
                 entity.HasKey(e => e.MaVoucher)
+
                     .HasName("PK__Voucher__0AAC5B11BC8A0E6A");
+
 
                 entity.ToTable("Voucher");
 
