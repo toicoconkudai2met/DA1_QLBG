@@ -29,163 +29,188 @@
         private void InitializeComponent()
         {
             groupBox2 = new GroupBox();
-            comboBox2 = new ComboBox();
-            label35 = new Label();
-            textBox14 = new TextBox();
-            textBox16 = new TextBox();
-            textBox17 = new TextBox();
-            textBox18 = new TextBox();
+            groupBox1 = new GroupBox();
+            rdokhvip = new RadioButton();
+            rdokht = new RadioButton();
+            txtdckh = new TextBox();
+            txttkh = new TextBox();
+            txtsdtkh = new TextBox();
+            txtmkh = new TextBox();
             label17 = new Label();
-            dateTimePicker2 = new DateTimePicker();
-            groupBox10 = new GroupBox();
-            radioButton3 = new RadioButton();
-            radioButton4 = new RadioButton();
+            dtpkh = new DateTimePicker();
+            grbgioitinh = new GroupBox();
+            rdonam = new RadioButton();
+            rdonu = new RadioButton();
             label19 = new Label();
             label21 = new Label();
             label22 = new Label();
             label23 = new Label();
             groupBox6 = new GroupBox();
-            dataGridView1 = new DataGridView();
-            textBox15 = new TextBox();
-            button13 = new Button();
-            button15 = new Button();
-            button16 = new Button();
-            button17 = new Button();
-            button18 = new Button();
+            dgvkh = new DataGridView();
+            txttimkiemkh = new TextBox();
+            btnhienthikh = new Button();
+            btntimkiemkh = new Button();
+            btnsuakh = new Button();
+            btnthemkh = new Button();
             groupBox2.SuspendLayout();
-            groupBox10.SuspendLayout();
+            groupBox1.SuspendLayout();
+            grbgioitinh.SuspendLayout();
             groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvkh).BeginInit();
             SuspendLayout();
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(comboBox2);
-            groupBox2.Controls.Add(label35);
-            groupBox2.Controls.Add(textBox14);
-            groupBox2.Controls.Add(textBox16);
-            groupBox2.Controls.Add(textBox17);
-            groupBox2.Controls.Add(textBox18);
+            groupBox2.Controls.Add(groupBox1);
+            groupBox2.Controls.Add(txtdckh);
+            groupBox2.Controls.Add(txttkh);
+            groupBox2.Controls.Add(txtsdtkh);
+            groupBox2.Controls.Add(txtmkh);
             groupBox2.Controls.Add(label17);
-            groupBox2.Controls.Add(dateTimePicker2);
-            groupBox2.Controls.Add(groupBox10);
+            groupBox2.Controls.Add(dtpkh);
+            groupBox2.Controls.Add(grbgioitinh);
             groupBox2.Controls.Add(label19);
             groupBox2.Controls.Add(label21);
             groupBox2.Controls.Add(label22);
             groupBox2.Controls.Add(label23);
-            groupBox2.Location = new Point(12, 12);
+            groupBox2.Location = new Point(10, 9);
+            groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(397, 596);
+            groupBox2.Padding = new Padding(3, 2, 3, 2);
+            groupBox2.Size = new Size(347, 447);
             groupBox2.TabIndex = 79;
             groupBox2.TabStop = false;
             groupBox2.Text = "groupBox2";
             // 
-            // comboBox2
+            // groupBox1
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Khách hàng mới", "Khách hàng trung thành", "Khách VIP" });
-            comboBox2.Location = new Point(120, 326);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(239, 28);
-            comboBox2.TabIndex = 87;
+            groupBox1.Controls.Add(rdokhvip);
+            groupBox1.Controls.Add(rdokht);
+            groupBox1.Location = new Point(7, 251);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(303, 118);
+            groupBox1.TabIndex = 86;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Phân Loại Khách Hàng";
             // 
-            // label35
+            // rdokhvip
             // 
-            label35.AutoSize = true;
-            label35.BackColor = Color.White;
-            label35.Location = new Point(3, 330);
-            label35.Name = "label35";
-            label35.Size = new Size(94, 20);
-            label35.TabIndex = 86;
-            label35.Text = "Phân loại KH";
+            rdokhvip.AutoSize = true;
+            rdokhvip.Location = new Point(169, 51);
+            rdokhvip.Name = "rdokhvip";
+            rdokhvip.Size = new Size(78, 19);
+            rdokhvip.TabIndex = 1;
+            rdokhvip.TabStop = true;
+            rdokhvip.Text = "Khách Vip";
+            rdokhvip.UseVisualStyleBackColor = true;
             // 
-            // textBox14
+            // rdokht
             // 
-            textBox14.Location = new Point(120, 285);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(239, 27);
-            textBox14.TabIndex = 85;
+            rdokht.AutoSize = true;
+            rdokht.Location = new Point(12, 51);
+            rdokht.Name = "rdokht";
+            rdokht.Size = new Size(102, 19);
+            rdokht.TabIndex = 0;
+            rdokht.TabStop = true;
+            rdokht.Text = "Khách Thường";
+            rdokht.UseVisualStyleBackColor = true;
             // 
-            // textBox16
+            // txtdckh
             // 
-            textBox16.Location = new Point(120, 71);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(239, 27);
-            textBox16.TabIndex = 81;
+            txtdckh.Location = new Point(105, 214);
+            txtdckh.Margin = new Padding(3, 2, 3, 2);
+            txtdckh.Name = "txtdckh";
+            txtdckh.Size = new Size(210, 23);
+            txtdckh.TabIndex = 85;
             // 
-            // textBox17
+            // txttkh
             // 
-            textBox17.Location = new Point(125, 192);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(234, 27);
-            textBox17.TabIndex = 80;
+            txttkh.Location = new Point(105, 53);
+            txttkh.Margin = new Padding(3, 2, 3, 2);
+            txttkh.Name = "txttkh";
+            txttkh.Size = new Size(210, 23);
+            txttkh.TabIndex = 81;
             // 
-            // textBox18
+            // txtsdtkh
             // 
-            textBox18.Cursor = Cursors.IBeam;
-            textBox18.Location = new Point(125, 25);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(234, 27);
-            textBox18.TabIndex = 79;
+            txtsdtkh.Location = new Point(109, 144);
+            txtsdtkh.Margin = new Padding(3, 2, 3, 2);
+            txtsdtkh.Name = "txtsdtkh";
+            txtsdtkh.Size = new Size(205, 23);
+            txtsdtkh.TabIndex = 80;
+            // 
+            // txtmkh
+            // 
+            txtmkh.Cursor = Cursors.IBeam;
+            txtmkh.Location = new Point(109, 19);
+            txtmkh.Margin = new Padding(3, 2, 3, 2);
+            txtmkh.Name = "txtmkh";
+            txtmkh.Size = new Size(205, 23);
+            txtmkh.TabIndex = 79;
             // 
             // label17
             // 
             label17.AutoSize = true;
             label17.BackColor = Color.White;
-            label17.Location = new Point(3, 288);
+            label17.Location = new Point(3, 216);
             label17.Name = "label17";
-            label17.Size = new Size(55, 20);
+            label17.Size = new Size(43, 15);
             label17.TabIndex = 84;
             label17.Text = "Địa chỉ";
             // 
-            // dateTimePicker2
+            // dtpkh
             // 
-            dateTimePicker2.Location = new Point(120, 240);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(239, 27);
-            dateTimePicker2.TabIndex = 83;
+            dtpkh.Location = new Point(105, 180);
+            dtpkh.Margin = new Padding(3, 2, 3, 2);
+            dtpkh.Name = "dtpkh";
+            dtpkh.Size = new Size(210, 23);
+            dtpkh.TabIndex = 83;
             // 
-            // groupBox10
+            // grbgioitinh
             // 
-            groupBox10.BackColor = Color.WhiteSmoke;
-            groupBox10.Controls.Add(radioButton3);
-            groupBox10.Controls.Add(radioButton4);
-            groupBox10.Location = new Point(3, 104);
-            groupBox10.Name = "groupBox10";
-            groupBox10.Size = new Size(351, 70);
-            groupBox10.TabIndex = 82;
-            groupBox10.TabStop = false;
-            groupBox10.Text = "Giới tính";
+            grbgioitinh.BackColor = Color.WhiteSmoke;
+            grbgioitinh.Controls.Add(rdonam);
+            grbgioitinh.Controls.Add(rdonu);
+            grbgioitinh.Location = new Point(3, 78);
+            grbgioitinh.Margin = new Padding(3, 2, 3, 2);
+            grbgioitinh.Name = "grbgioitinh";
+            grbgioitinh.Padding = new Padding(3, 2, 3, 2);
+            grbgioitinh.Size = new Size(307, 52);
+            grbgioitinh.TabIndex = 82;
+            grbgioitinh.TabStop = false;
+            grbgioitinh.Text = "Giới tính";
             // 
-            // radioButton3
+            // rdonam
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(37, 24);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(62, 24);
-            radioButton3.TabIndex = 42;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Nam";
-            radioButton3.UseVisualStyleBackColor = true;
+            rdonam.AutoSize = true;
+            rdonam.Location = new Point(32, 18);
+            rdonam.Margin = new Padding(3, 2, 3, 2);
+            rdonam.Name = "rdonam";
+            rdonam.Size = new Size(51, 19);
+            rdonam.TabIndex = 42;
+            rdonam.TabStop = true;
+            rdonam.Text = "Nam";
+            rdonam.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rdonu
             // 
-            radioButton4.AutoSize = true;
-            radioButton4.Location = new Point(216, 24);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(50, 24);
-            radioButton4.TabIndex = 43;
-            radioButton4.TabStop = true;
-            radioButton4.Text = "Nữ";
-            radioButton4.UseVisualStyleBackColor = true;
+            rdonu.AutoSize = true;
+            rdonu.Location = new Point(189, 18);
+            rdonu.Margin = new Padding(3, 2, 3, 2);
+            rdonu.Name = "rdonu";
+            rdonu.Size = new Size(41, 19);
+            rdonu.TabIndex = 43;
+            rdonu.TabStop = true;
+            rdonu.Text = "Nữ";
+            rdonu.UseVisualStyleBackColor = true;
             // 
             // label19
             // 
             label19.AutoSize = true;
             label19.BackColor = Color.White;
-            label19.Location = new Point(3, 245);
+            label19.Location = new Point(3, 184);
             label19.Name = "label19";
-            label19.Size = new Size(74, 20);
+            label19.Size = new Size(60, 15);
             label19.TabIndex = 78;
             label19.Text = "Ngày sinh";
             // 
@@ -193,9 +218,9 @@
             // 
             label21.AutoSize = true;
             label21.BackColor = Color.White;
-            label21.Location = new Point(3, 199);
+            label21.Location = new Point(3, 149);
             label21.Name = "label21";
-            label21.Size = new Size(97, 20);
+            label21.Size = new Size(76, 15);
             label21.TabIndex = 77;
             label21.Text = "Số điện thoại";
             // 
@@ -203,9 +228,9 @@
             // 
             label22.AutoSize = true;
             label22.BackColor = Color.White;
-            label22.Location = new Point(3, 74);
+            label22.Location = new Point(3, 56);
             label22.Name = "label22";
-            label22.Size = new Size(111, 20);
+            label22.Size = new Size(90, 15);
             label22.TabIndex = 76;
             label22.Text = "Tên khách hàng";
             // 
@@ -213,133 +238,140 @@
             // 
             label23.AutoSize = true;
             label23.BackColor = Color.White;
-            label23.Location = new Point(3, 29);
+            label23.Location = new Point(3, 22);
             label23.Name = "label23";
-            label23.Size = new Size(109, 20);
+            label23.Size = new Size(89, 15);
             label23.TabIndex = 75;
             label23.Text = "Mã khách hàng";
             // 
             // groupBox6
             // 
-            groupBox6.Controls.Add(dataGridView1);
-            groupBox6.Controls.Add(textBox15);
-            groupBox6.Controls.Add(button13);
-            groupBox6.Controls.Add(button15);
-            groupBox6.Controls.Add(button16);
-            groupBox6.Controls.Add(button17);
-            groupBox6.Controls.Add(button18);
-            groupBox6.Location = new Point(415, 15);
+            groupBox6.Controls.Add(dgvkh);
+            groupBox6.Controls.Add(txttimkiemkh);
+            groupBox6.Controls.Add(btnhienthikh);
+            groupBox6.Controls.Add(btntimkiemkh);
+            groupBox6.Controls.Add(btnsuakh);
+            groupBox6.Controls.Add(btnthemkh);
+            groupBox6.Location = new Point(363, 11);
+            groupBox6.Margin = new Padding(3, 2, 3, 2);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(887, 593);
+            groupBox6.Padding = new Padding(3, 2, 3, 2);
+            groupBox6.Size = new Size(776, 445);
             groupBox6.TabIndex = 80;
             groupBox6.TabStop = false;
             groupBox6.Text = "groupBox6";
             // 
-            // dataGridView1
+            // dgvkh
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(10, 67);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(871, 531);
-            dataGridView1.TabIndex = 74;
+            dgvkh.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvkh.Location = new Point(9, 50);
+            dgvkh.Margin = new Padding(3, 2, 3, 2);
+            dgvkh.Name = "dgvkh";
+            dgvkh.RowHeadersWidth = 51;
+            dgvkh.Size = new Size(762, 398);
+            dgvkh.TabIndex = 74;
+            dgvkh.CellClick += dgvkh_CellClick;
             // 
-            // textBox15
+            // txttimkiemkh
             // 
-            textBox15.Location = new Point(666, 31);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(190, 27);
-            textBox15.TabIndex = 72;
+            txttimkiemkh.Location = new Point(553, 23);
+            txttimkiemkh.Margin = new Padding(3, 2, 3, 2);
+            txttimkiemkh.Name = "txttimkiemkh";
+            txttimkiemkh.Size = new Size(197, 23);
+            txttimkiemkh.TabIndex = 72;
             // 
-            // button13
+            // btnhienthikh
             // 
-            button13.Location = new Point(395, 28);
-            button13.Name = "button13";
-            button13.Size = new Size(83, 31);
-            button13.TabIndex = 73;
-            button13.Text = "Hiển Thị";
-            button13.UseVisualStyleBackColor = true;
+            btnhienthikh.Location = new Point(326, 20);
+            btnhienthikh.Margin = new Padding(3, 2, 3, 2);
+            btnhienthikh.Name = "btnhienthikh";
+            btnhienthikh.Size = new Size(73, 23);
+            btnhienthikh.TabIndex = 73;
+            btnhienthikh.Text = "Hiển Thị";
+            btnhienthikh.UseVisualStyleBackColor = true;
+            btnhienthikh.Click += btnhienthikh_Click;
             // 
-            // button15
+            // btntimkiemkh
             // 
-            button15.Location = new Point(548, 30);
-            button15.Name = "button15";
-            button15.Size = new Size(94, 29);
-            button15.TabIndex = 71;
-            button15.Text = "Tìm kiếm";
-            button15.UseVisualStyleBackColor = true;
+            btntimkiemkh.Location = new Point(465, 20);
+            btntimkiemkh.Margin = new Padding(3, 2, 3, 2);
+            btntimkiemkh.Name = "btntimkiemkh";
+            btntimkiemkh.Size = new Size(82, 22);
+            btntimkiemkh.TabIndex = 71;
+            btntimkiemkh.Text = "Tìm kiếm";
+            btntimkiemkh.UseVisualStyleBackColor = true;
+            btntimkiemkh.Click += btntimkiemkh_Click;
             // 
-            // button16
+            // btnsuakh
             // 
-            button16.Location = new Point(269, 30);
-            button16.Name = "button16";
-            button16.Size = new Size(83, 31);
-            button16.TabIndex = 70;
-            button16.Text = "Xóa";
-            button16.UseVisualStyleBackColor = true;
+            btnsuakh.Location = new Point(178, 20);
+            btnsuakh.Margin = new Padding(3, 2, 3, 2);
+            btnsuakh.Name = "btnsuakh";
+            btnsuakh.Size = new Size(82, 22);
+            btnsuakh.TabIndex = 69;
+            btnsuakh.Text = "Sửa";
+            btnsuakh.UseVisualStyleBackColor = true;
+            btnsuakh.Click += btnsuakh_Click;
             // 
-            // button17
+            // btnthemkh
             // 
-            button17.Location = new Point(134, 30);
-            button17.Name = "button17";
-            button17.Size = new Size(94, 29);
-            button17.TabIndex = 69;
-            button17.Text = "Sửa";
-            button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            button18.Location = new Point(10, 30);
-            button18.Name = "button18";
-            button18.Size = new Size(94, 29);
-            button18.TabIndex = 68;
-            button18.Text = "Thêm";
-            button18.UseVisualStyleBackColor = true;
+            btnthemkh.Location = new Point(41, 21);
+            btnthemkh.Margin = new Padding(3, 2, 3, 2);
+            btnthemkh.Name = "btnthemkh";
+            btnthemkh.Size = new Size(82, 22);
+            btnthemkh.TabIndex = 68;
+            btnthemkh.Text = "Thêm";
+            btnthemkh.UseVisualStyleBackColor = true;
+            btnthemkh.Click += btnthemkh_Click;
             // 
             // QuanLyKhachHang
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1296, 617);
+            ClientSize = new Size(1134, 463);
             Controls.Add(groupBox6);
             Controls.Add(groupBox2);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "QuanLyKhachHang";
             Text = "QuanLyKhachHang";
+            Load += QuanLyKhachHang_Load;
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            groupBox10.ResumeLayout(false);
-            groupBox10.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            grbgioitinh.ResumeLayout(false);
+            grbgioitinh.PerformLayout();
             groupBox6.ResumeLayout(false);
             groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvkh).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private GroupBox groupBox2;
-        private ComboBox comboBox2;
-        private Label label35;
-        private TextBox textBox14;
-        private TextBox textBox16;
-        private TextBox textBox17;
-        private TextBox textBox18;
+        private TextBox txtdckh;
+        private TextBox txttkh;
+        private TextBox txtsdtkh;
+        private TextBox txtmkh;
         private Label label17;
-        private DateTimePicker dateTimePicker2;
-        private GroupBox groupBox10;
-        private RadioButton radioButton3;
-        private RadioButton radioButton4;
+        private DateTimePicker dtpkh;
+        private GroupBox grbgioitinh;
+        private RadioButton rdonam;
+        private RadioButton rdonu;
         private Label label19;
         private Label label21;
         private Label label22;
         private Label label23;
         private GroupBox groupBox6;
-        private DataGridView dataGridView1;
-        private TextBox textBox15;
-        private Button button13;
-        private Button button15;
-        private Button button16;
-        private Button button17;
-        private Button button18;
+        private DataGridView dgvkh;
+        private TextBox txttimkiemkh;
+        private Button btnhienthikh;
+        private Button btntimkiemkh;
+        private Button btnsuakh;
+        private Button btnthemkh;
+        private GroupBox groupBox1;
+        private RadioButton rdokhvip;
+        private RadioButton rdokht;
     }
 }
