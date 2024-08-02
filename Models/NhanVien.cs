@@ -17,7 +17,8 @@ namespace GUI.Models
         public string Calam { get; set; } = null!;
         public DateTime Ngaysinh { get; set; }
         public string Dchi { get; set; } = null!;
-        public bool TrangThaiNv { get; set; }
+
+        public string TrangThaiNv { get; set; } = null!;
 
         public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
