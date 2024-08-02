@@ -34,10 +34,6 @@
             cbbKichCo = new ComboBox();
             txtGiaBan = new TextBox();
             lblGiaBan = new Label();
-            ptbHien = new PictureBox();
-            btnHien = new Button();
-            txtAnh = new TextBox();
-            lblAnh = new Label();
             cbbChatLieu = new ComboBox();
             txtSoLuong = new TextBox();
             txtTenSP = new TextBox();
@@ -51,12 +47,14 @@
             txtTimKiem = new TextBox();
             btnTimKiem = new Button();
             btnHienThi = new Button();
-            btnXoa = new Button();
             btnSua = new Button();
             btnThem = new Button();
-            ((System.ComponentModel.ISupportInitialize)ptbHien).BeginInit();
+            grbTrangThai = new GroupBox();
+            rdoHet = new RadioButton();
+            rdoCon = new RadioButton();
             groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSanPham).BeginInit();
+            grbTrangThai.SuspendLayout();
             SuspendLayout();
             // 
             // txtMaSP
@@ -108,40 +106,6 @@
             lblGiaBan.Size = new Size(60, 20);
             lblGiaBan.TabIndex = 58;
             lblGiaBan.Text = "Giá Bán";
-            // 
-            // ptbHien
-            // 
-            ptbHien.Location = new Point(150, 472);
-            ptbHien.Name = "ptbHien";
-            ptbHien.Size = new Size(240, 140);
-            ptbHien.TabIndex = 57;
-            ptbHien.TabStop = false;
-            // 
-            // btnHien
-            // 
-            btnHien.Location = new Point(47, 472);
-            btnHien.Name = "btnHien";
-            btnHien.Size = new Size(59, 29);
-            btnHien.TabIndex = 56;
-            btnHien.Text = "Hiện";
-            btnHien.UseVisualStyleBackColor = true;
-            // 
-            // txtAnh
-            // 
-            txtAnh.Location = new Point(148, 371);
-            txtAnh.Multiline = true;
-            txtAnh.Name = "txtAnh";
-            txtAnh.Size = new Size(242, 82);
-            txtAnh.TabIndex = 55;
-            // 
-            // lblAnh
-            // 
-            lblAnh.AutoSize = true;
-            lblAnh.Location = new Point(41, 371);
-            lblAnh.Name = "lblAnh";
-            lblAnh.Size = new Size(35, 20);
-            lblAnh.TabIndex = 54;
-            lblAnh.Text = "Ảnh";
             // 
             // cbbChatLieu
             // 
@@ -217,7 +181,6 @@
             groupBox5.Controls.Add(txtTimKiem);
             groupBox5.Controls.Add(btnTimKiem);
             groupBox5.Controls.Add(btnHienThi);
-            groupBox5.Controls.Add(btnXoa);
             groupBox5.Controls.Add(btnSua);
             groupBox5.Controls.Add(btnThem);
             groupBox5.Location = new Point(410, 52);
@@ -226,6 +189,7 @@
             groupBox5.TabIndex = 64;
             groupBox5.TabStop = false;
             groupBox5.Text = "Bản Chi Tiết Sản phẩm";
+            groupBox5.Enter += groupBox5_Enter;
             // 
             // dgvSanPham
             // 
@@ -235,64 +199,94 @@
             dgvSanPham.RowHeadersWidth = 51;
             dgvSanPham.Size = new Size(774, 487);
             dgvSanPham.TabIndex = 6;
+            dgvSanPham.CellClick += dgvSanPham_CellClick;
             // 
             // txtTimKiem
             // 
-            txtTimKiem.Location = new Point(603, 36);
+            txtTimKiem.Location = new Point(589, 36);
             txtTimKiem.Name = "txtTimKiem";
             txtTimKiem.Size = new Size(181, 27);
             txtTimKiem.TabIndex = 5;
             // 
             // btnTimKiem
             // 
-            btnTimKiem.Location = new Point(491, 36);
+            btnTimKiem.Location = new Point(469, 36);
             btnTimKiem.Name = "btnTimKiem";
             btnTimKiem.Size = new Size(94, 29);
             btnTimKiem.TabIndex = 4;
             btnTimKiem.Text = "Tìm Kiếm";
             btnTimKiem.UseVisualStyleBackColor = true;
+            btnTimKiem.Click += btnTimKiem_Click;
             // 
             // btnHienThi
             // 
-            btnHienThi.Location = new Point(370, 36);
+            btnHienThi.Location = new Point(336, 36);
             btnHienThi.Name = "btnHienThi";
             btnHienThi.Size = new Size(94, 29);
             btnHienThi.TabIndex = 3;
             btnHienThi.Text = "Hiển Thị";
             btnHienThi.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            btnXoa.Location = new Point(258, 36);
-            btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(94, 29);
-            btnXoa.TabIndex = 2;
-            btnXoa.Text = "Xoá";
-            btnXoa.UseVisualStyleBackColor = true;
+            btnHienThi.Click += btnHienThi_Click;
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(134, 36);
+            btnSua.Location = new Point(206, 35);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(94, 29);
             btnSua.TabIndex = 1;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(6, 36);
+            btnThem.Location = new Point(74, 35);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(94, 29);
             btnThem.TabIndex = 0;
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
+            // 
+            // grbTrangThai
+            // 
+            grbTrangThai.Controls.Add(rdoHet);
+            grbTrangThai.Controls.Add(rdoCon);
+            grbTrangThai.Location = new Point(43, 377);
+            grbTrangThai.Name = "grbTrangThai";
+            grbTrangThai.Size = new Size(345, 121);
+            grbTrangThai.TabIndex = 65;
+            grbTrangThai.TabStop = false;
+            grbTrangThai.Text = "Trạng Thái Hoạt Động";
+            // 
+            // rdoHet
+            // 
+            rdoHet.AutoSize = true;
+            rdoHet.Location = new Point(190, 47);
+            rdoHet.Name = "rdoHet";
+            rdoHet.Size = new Size(94, 24);
+            rdoHet.TabIndex = 1;
+            rdoHet.TabStop = true;
+            rdoHet.Text = "Hết Hàng";
+            rdoHet.UseVisualStyleBackColor = true;
+            // 
+            // rdoCon
+            // 
+            rdoCon.AutoSize = true;
+            rdoCon.Location = new Point(17, 47);
+            rdoCon.Name = "rdoCon";
+            rdoCon.Size = new Size(96, 24);
+            rdoCon.TabIndex = 0;
+            rdoCon.TabStop = true;
+            rdoCon.Text = "Còn Hàng";
+            rdoCon.UseVisualStyleBackColor = true;
             // 
             // QuanLySanPham
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1236, 655);
+            Controls.Add(grbTrangThai);
             Controls.Add(groupBox5);
             Controls.Add(txtMaSP);
             Controls.Add(label2);
@@ -300,10 +294,6 @@
             Controls.Add(cbbKichCo);
             Controls.Add(txtGiaBan);
             Controls.Add(lblGiaBan);
-            Controls.Add(ptbHien);
-            Controls.Add(btnHien);
-            Controls.Add(txtAnh);
-            Controls.Add(lblAnh);
             Controls.Add(cbbChatLieu);
             Controls.Add(txtSoLuong);
             Controls.Add(txtTenSP);
@@ -314,10 +304,12 @@
             Controls.Add(lblTenSP);
             Name = "QuanLySanPham";
             Text = "QuanLySanPham";
-            ((System.ComponentModel.ISupportInitialize)ptbHien).EndInit();
+            Load += QuanLySanPham_Load;
             groupBox5.ResumeLayout(false);
             groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSanPham).EndInit();
+            grbTrangThai.ResumeLayout(false);
+            grbTrangThai.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -330,10 +322,6 @@
         private ComboBox cbbKichCo;
         private TextBox txtGiaBan;
         private Label lblGiaBan;
-        private PictureBox ptbHien;
-        private Button btnHien;
-        private TextBox txtAnh;
-        private Label lblAnh;
         private ComboBox cbbChatLieu;
         private TextBox txtSoLuong;
         private TextBox txtTenSP;
@@ -347,8 +335,10 @@
         private TextBox txtTimKiem;
         private Button btnTimKiem;
         private Button btnHienThi;
-        private Button btnXoa;
         private Button btnSua;
         private Button btnThem;
+        private GroupBox grbTrangThai;
+        private RadioButton rdoHet;
+        private RadioButton rdoCon;
     }
 }
