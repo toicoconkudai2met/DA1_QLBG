@@ -35,18 +35,20 @@
             lblTenKhachHang = new Label();
             lblSDT = new Label();
             groupBox4 = new GroupBox();
+            btnInHoaDon = new Button();
             btnHuy = new Button();
             btnThanhToan = new Button();
-            textBox3 = new TextBox();
-            lblTienThua = new Label();
-            label18 = new Label();
+            txtTienKhach = new TextBox();
+            lbltienThua = new Label();
+            lblTraLai = new Label();
             lblTienKhachDua = new Label();
             lblTongTien = new Label();
             lblTongHoaDon = new Label();
             dgvHoaDonCho = new DataGridView();
-            comboBox3 = new ComboBox();
+            cbbHoaDon = new ComboBox();
             lblChonHoaDon = new Label();
             groupBox7 = new GroupBox();
+            btnShowSP = new Button();
             dgvdanhSachSanPham = new DataGridView();
             txtTimKiem1 = new TextBox();
             lblTimKiem = new Label();
@@ -81,6 +83,7 @@
             btnTaoHoaDon.TabIndex = 4;
             btnTaoHoaDon.Text = "Tạo Hoá Đơn";
             btnTaoHoaDon.UseVisualStyleBackColor = true;
+            btnTaoHoaDon.Click += btnTaoHoaDon_Click;
             // 
             // txtTenKhachHang
             // 
@@ -96,6 +99,7 @@
             txtSDT.Name = "txtSDT";
             txtSDT.Size = new Size(252, 34);
             txtSDT.TabIndex = 2;
+            txtSDT.TextChanged += txtSDT_TextChanged;
             // 
             // lblTenKhachHang
             // 
@@ -119,69 +123,82 @@
             // 
             // groupBox4
             // 
+            groupBox4.Controls.Add(btnInHoaDon);
             groupBox4.Controls.Add(btnHuy);
             groupBox4.Controls.Add(btnThanhToan);
-            groupBox4.Controls.Add(textBox3);
-            groupBox4.Controls.Add(lblTienThua);
-            groupBox4.Controls.Add(label18);
+            groupBox4.Controls.Add(txtTienKhach);
+            groupBox4.Controls.Add(lbltienThua);
+            groupBox4.Controls.Add(lblTraLai);
             groupBox4.Controls.Add(lblTienKhachDua);
             groupBox4.Controls.Add(lblTongTien);
             groupBox4.Controls.Add(lblTongHoaDon);
             groupBox4.Controls.Add(dgvHoaDonCho);
-            groupBox4.Controls.Add(comboBox3);
+            groupBox4.Controls.Add(cbbHoaDon);
             groupBox4.Controls.Add(lblChonHoaDon);
             groupBox4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox4.Location = new Point(316, 24);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(483, 583);
+            groupBox4.Size = new Size(483, 597);
             groupBox4.TabIndex = 2;
             groupBox4.TabStop = false;
             groupBox4.Text = "Thông Tin Hoá Đơn";
             // 
+            // btnInHoaDon
+            // 
+            btnInHoaDon.Location = new Point(338, 553);
+            btnInHoaDon.Name = "btnInHoaDon";
+            btnInHoaDon.Size = new Size(130, 38);
+            btnInHoaDon.TabIndex = 15;
+            btnInHoaDon.Text = "In Hóa Đơn";
+            btnInHoaDon.UseVisualStyleBackColor = true;
+            btnInHoaDon.Click += btnInHoaDon_Click;
+            // 
             // btnHuy
             // 
-            btnHuy.Location = new Point(338, 535);
+            btnHuy.Location = new Point(338, 511);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(130, 36);
             btnHuy.TabIndex = 14;
             btnHuy.Text = "Huỷ";
             btnHuy.UseVisualStyleBackColor = true;
+            btnHuy.Click += btnHuy_Click;
             // 
             // btnThanhToan
             // 
-            btnThanhToan.Location = new Point(338, 487);
+            btnThanhToan.Location = new Point(338, 469);
             btnThanhToan.Name = "btnThanhToan";
             btnThanhToan.Size = new Size(130, 36);
             btnThanhToan.TabIndex = 13;
             btnThanhToan.Text = "Thanh Toán";
             btnThanhToan.UseVisualStyleBackColor = true;
+            btnThanhToan.Click += btnThanhToan_Click;
             // 
-            // textBox3
+            // txtTienKhach
             // 
-            textBox3.Location = new Point(106, 487);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(226, 34);
-            textBox3.TabIndex = 5;
+            txtTienKhach.Location = new Point(106, 487);
+            txtTienKhach.Name = "txtTienKhach";
+            txtTienKhach.Size = new Size(226, 34);
+            txtTienKhach.TabIndex = 5;
             // 
-            // lblTienThua
+            // lbltienThua
             // 
-            lblTienThua.AutoSize = true;
-            lblTienThua.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTienThua.Location = new Point(8, 545);
-            lblTienThua.Name = "lblTienThua";
-            lblTienThua.Size = new Size(91, 22);
-            lblTienThua.TabIndex = 12;
-            lblTienThua.Text = "Tiền Thừa";
+            lbltienThua.AutoSize = true;
+            lbltienThua.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lbltienThua.Location = new Point(8, 545);
+            lbltienThua.Name = "lbltienThua";
+            lbltienThua.Size = new Size(91, 22);
+            lbltienThua.TabIndex = 12;
+            lbltienThua.Text = "Tiền Thừa";
             // 
-            // label18
+            // lblTraLai
             // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label18.Location = new Point(147, 545);
-            label18.Name = "label18";
-            label18.Size = new Size(116, 25);
-            label18.TabIndex = 11;
-            label18.Text = "Tiền Thừa";
+            lblTraLai.AutoSize = true;
+            lblTraLai.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTraLai.Location = new Point(147, 545);
+            lblTraLai.Name = "lblTraLai";
+            lblTraLai.Size = new Size(24, 25);
+            lblTraLai.TabIndex = 11;
+            lblTraLai.Text = "0";
             // 
             // lblTienKhachDua
             // 
@@ -199,9 +216,9 @@
             lblTongTien.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             lblTongTien.Location = new Point(201, 440);
             lblTongTien.Name = "lblTongTien";
-            lblTongTien.Size = new Size(114, 25);
+            lblTongTien.Size = new Size(24, 25);
             lblTongTien.TabIndex = 9;
-            lblTongTien.Text = "Tổng Tiền";
+            lblTongTien.Text = "0";
             // 
             // lblTongHoaDon
             // 
@@ -222,14 +239,16 @@
             dgvHoaDonCho.RowTemplate.Height = 29;
             dgvHoaDonCho.Size = new Size(471, 310);
             dgvHoaDonCho.TabIndex = 7;
+            dgvHoaDonCho.CellContentClick += dgvHoaDonCho_CellContentClick;
             // 
-            // comboBox3
+            // cbbHoaDon
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(152, 35);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(245, 36);
-            comboBox3.TabIndex = 6;
+            cbbHoaDon.FormattingEnabled = true;
+            cbbHoaDon.Location = new Point(152, 35);
+            cbbHoaDon.Name = "cbbHoaDon";
+            cbbHoaDon.Size = new Size(245, 36);
+            cbbHoaDon.TabIndex = 6;
+            cbbHoaDon.SelectedIndexChanged += cbbHoaDon_SelectedIndexChanged;
             // 
             // lblChonHoaDon
             // 
@@ -243,16 +262,28 @@
             // 
             // groupBox7
             // 
+            groupBox7.Controls.Add(btnShowSP);
             groupBox7.Controls.Add(dgvdanhSachSanPham);
             groupBox7.Controls.Add(txtTimKiem1);
             groupBox7.Controls.Add(lblTimKiem);
             groupBox7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox7.Location = new Point(805, 24);
             groupBox7.Name = "groupBox7";
-            groupBox7.Size = new Size(424, 556);
+            groupBox7.Size = new Size(424, 583);
             groupBox7.TabIndex = 15;
             groupBox7.TabStop = false;
             groupBox7.Text = "Danh Sách Sản Phẩm";
+            // 
+            // btnShowSP
+            // 
+            btnShowSP.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnShowSP.Location = new Point(6, 535);
+            btnShowSP.Name = "btnShowSP";
+            btnShowSP.Size = new Size(154, 36);
+            btnShowSP.TabIndex = 5;
+            btnShowSP.Text = "Hiển thị ";
+            btnShowSP.UseVisualStyleBackColor = true;
+            btnShowSP.Click += btnShowSP_Click;
             // 
             // dgvdanhSachSanPham
             // 
@@ -261,8 +292,10 @@
             dgvdanhSachSanPham.Name = "dgvdanhSachSanPham";
             dgvdanhSachSanPham.RowHeadersWidth = 51;
             dgvdanhSachSanPham.RowTemplate.Height = 29;
-            dgvdanhSachSanPham.Size = new Size(494, 506);
+            dgvdanhSachSanPham.Size = new Size(494, 441);
             dgvdanhSachSanPham.TabIndex = 15;
+            dgvdanhSachSanPham.CellContentClick += dgvdanhSachSanPham_CellContentClick;
+            dgvdanhSachSanPham.CellDoubleClick += dgvdanhSachSanPham_CellDoubleClick;
             // 
             // txtTimKiem1
             // 
@@ -291,6 +324,7 @@
             Controls.Add(groupBox3);
             Name = "QuanLyHoaDon";
             Text = "QuanLyHoaDon";
+            Load += QuanLyHoaDon_Load;
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox4.ResumeLayout(false);
@@ -313,18 +347,20 @@
         private GroupBox groupBox4;
         private Button btnHuy;
         private Button btnThanhToan;
-        private TextBox textBox3;
-        private Label lblTienThua;
-        private Label label18;
+        private TextBox txtTienKhach;
+        private Label lbltienThua;
+        private Label lblTraLai;
         private Label lblTienKhachDua;
         private Label lblTongTien;
         private Label lblTongHoaDon;
         private DataGridView dgvHoaDonCho;
-        private ComboBox comboBox3;
+        private ComboBox cbbHoaDon;
         private Label lblChonHoaDon;
         private GroupBox groupBox7;
         private DataGridView dgvdanhSachSanPham;
         private TextBox txtTimKiem1;
         private Label lblTimKiem;
+        private Button btnShowSP;
+        private Button btnInHoaDon;
     }
 }
